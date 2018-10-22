@@ -31,6 +31,7 @@ public class Leitura {
         //Transformando o arquivo em modelo de ontologia
         model.read(inputStreamReader, "RDF/XML");
         
+        System.out.println("\nSubclasses de Pizza:");
         //Obtendo classe Pizza
         OntClass pizza = model.getOntClass(NAMESPACE + "Pizza");
         //Listando todas as subclasses de Pizza
@@ -42,10 +43,22 @@ public class Leitura {
         	}
         }
         
+        System.out.println("\nPizzas de queijo: ");
+        //Obtendo classe Pizza
+        OntClass cheesyPizza = model.getOntClass(NAMESPACE + "CheesyPizza");
+        //Listando todas as subclasses de Pizza
+        subclasses = cheesyPizza.listSubClasses(false);
+        while(subclasses.hasNext()) {
+        	String sub = subclasses.next().getLocalName();
+        	if(sub != null) {
+        		System.out.println(sub);
+        	}
+        }
+        
         //Fechando os streams de arquivo
         try {
-			inputStreamReader.close();
-			inputStream.close();
+        	inputStreamReader.close();
+        	inputStream.close();
 	        inputStream = null;
 	        inputStreamReader = null;
 		} catch (IOException e) {
