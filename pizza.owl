@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test"
+     xml:base="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasIngrediente"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#isBaseOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasIngrediente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasIngrediente">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#isIngredienteOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasRecheio -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasRecheio">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasIngrediente"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#isRecheioOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaRecheio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#isBaseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#isBaseOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#isIngredienteOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaBase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Pizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#isIngredienteOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#isIngredienteOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#isRecheioOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#isRecheioOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#isIngredienteOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaRecheio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Pizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Apimentada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Apimentada">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Carne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Atum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Atum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#FrutosDoMar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Azeitona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Azeitona">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Vegetais"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#BaseFina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#BaseFina">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#BaseGrossa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#BaseGrossa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Calabresa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Calabresa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Carne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#CalabresaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#CalabresaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasRecheio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Calabresa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasRecheio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Parmesao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasRecheio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Tomate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Camarão -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Camarão">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#FrutosDoMar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Carne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Carne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaRecheio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#CheesyPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#CheesyPizza">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasRecheio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Queijo"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Cogumelo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Cogumelo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Vegetais"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#FrutosDoMar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#FrutosDoMar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaRecheio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#MargheritaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#MargheritaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasRecheio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Mussarela"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasRecheio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Tomate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasRecheio"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Mussarela"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Tomate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Mussarela -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Mussarela">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Queijo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#NamedPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#NamedPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Parmesao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Parmesao">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Queijo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Pizza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaBase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaRecheio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaRecheio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Queijo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Queijo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaRecheio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Salame -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Salame">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Carne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Tomate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Tomate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Vegetais"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Vegetais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Vegetais">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#PizzaRecheio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#VegetarianPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#VegetarianPizza">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasRecheio"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Queijo"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Vegetais"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#pizza">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#BaseFina"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#hasRecheio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Mussarela"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Carne"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#FrutosDoMar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Queijo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/levy/ontologies/2018/9/pizza-test#Vegetais"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
