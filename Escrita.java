@@ -8,11 +8,17 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 
+import org.apache.jena.ontology.AllValuesFromRestriction;
+import org.apache.jena.ontology.Individual;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
+import org.apache.jena.ontology.SomeValuesFromRestriction;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.util.FileManager;
+import org.apache.jena.util.iterator.ExtendedIterator;
 
 public class Escrita {
 	//Namespace da ontologia
@@ -54,14 +60,38 @@ public class Escrita {
 			e.printStackTrace();
 		}
 	    
-	    //Adicionando outra classe
+	    //Adicionando nova classe
 	    OntClass novoRecheio = model.createClass(NAMESPACE + "Cheddar");
 	    OntClass queijo = model.createClass(NAMESPACE + "Queijo");
 	    novoRecheio.setSuperClass(queijo);
 	    
+	    //Adicionando um novo Indivíduo
+	    Resource pizza = model.createResource(NAMESPACE + "Pizza");
+	    Individual novaPizza = model.createIndividual(NAMESPACE + "novaPizza", pizza);
+	    Property hasBase = model.getProperty(NAMESPACE + "hasBase");
+	    Property hasRecheio = model.getProperty(NAMESPACE + "hasRecheio");
+	    OntClass baseFina = model.getOntClass(NAMESPACE + "BaseFina");
+	    OntClass parmesao = model.getOntClass(NAMESPACE + "Parmesao");
+	    
+	    //Inserindo restrições do indivíduo
+	    SomeValuesFromRestriction temBaseFina = model.createSomeValuesFromRestriction(null, hasBase, baseFina);
+	    novaPizza.addRDFType(temBaseFina);
+	    SomeValuesFromRestriction temRecheioParmesao = model.createSomeValuesFromRestriction(null, hasRecheio, parmesao);
+	    novaPizza.addRDFType(temRecheioParmesao);
+	    
+	    //Obtendo tipos do indivíduo
+	    System.out.println("\nTipos da Nova Pizza:");
+	    ExtendedIterator<OntClass> classes = novaPizza.listOntClasses(false);
+	    while(classes.hasNext()) {
+	    	String name = classes.next().getLocalName();
+	    	if(name != null) {
+	    		System.out.println(name);	    		
+	    	}
+	    }
+	    
 	    //Escrevendo mudanças
 	    model.write(outputStreamWriter);
-	    System.out.println("Dados salvos com sucesso!");
+	    System.out.println("\nDados salvos com sucesso!");
 		
 	    //Fechando os streams
 	    try {
