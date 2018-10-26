@@ -9,6 +9,15 @@ Foram utilizadas duas ferramentas para trabalhar com ontologias. O Protégé, qu
 - [Protégé](https://protege.stanford.edu/)
 - [Apache Jena](https://jena.apache.org/)
 
+# Organização
+
+O repositório está organizado em duas pastas, docs e src.
+
+- Docs
+  - Nesta pasta estão o slide de aula, a descrição da atividade avaliativa e um documento de tutorial de uso do Protégé
+- Src
+  - Nesta pasta estão códigos de exemplo de uso do framework Jena e o arquivo RDF/XML da ontologia utilizada pelos códigos
+
 # Links Interessantes
 
 - [Jena Documentação](https://jena.apache.org/documentation/ontology/)
