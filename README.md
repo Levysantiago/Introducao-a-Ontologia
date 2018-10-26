@@ -1,8 +1,8 @@
 # Descrição
 
-Este repositório foi criado para disponibilizar códigos, e documentos utilizados na aula sobre Ontologia.
+Este repositório foi criado para disponibilizar códigos, e documentos utilizados na aula sobre Ontologia. A aula foi realizada para a matéria de Tópicos Avançados em Computação I.
 
-# Programa e Framework
+# Ferramentas
 
 Foram utilizadas duas ferramentas para trabalhar com ontologias. O Protégé, que é uma ferramenta open-source para modelagem de ontologias e o Jena do Apache, que é um framework também open-source utilizado para realizar todo o processo de comunicação e link do código Java com a Ontologia. Abaixo se encontram os links para instalar as versões mais novas das ferramentas:
 
