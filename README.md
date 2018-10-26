@@ -13,9 +13,9 @@ Foram utilizadas duas ferramentas para trabalhar com ontologias. O Protégé, qu
 
 O repositório está organizado em duas pastas, docs e src.
 
-- Docs
+- [Docs](https://github.com/Levysantiago/Introducao-a-Ontologia/tree/master/docs)
   - Nesta pasta estão o slide de aula, a descrição da atividade avaliativa e um documento de tutorial de uso do Protégé
-- Src
+- [Src](https://github.com/Levysantiago/Introducao-a-Ontologia/tree/master/src)
   - Nesta pasta estão códigos de exemplo de uso do framework Jena e o arquivo RDF/XML da ontologia utilizada pelos códigos
 
 # Links Interessantes
